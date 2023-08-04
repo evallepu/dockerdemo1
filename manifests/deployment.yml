@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: evallepudockerdemo 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: evallepudockerdemo
+  template:
+    metadata:
+      labels:
+        app: evallepudockerdemo 
+    spec:
+      containers:
+        - name: evallepudockerdemo 
+          image: kbsdeploy.azurecr.io/evallepudockerdemo
+          ports:
+          - containerPort: 8080
