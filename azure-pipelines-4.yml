@@ -52,7 +52,7 @@ stages:
   - deployment: Deploy
     displayName: Deploy
     pool:
-      vmImage: $(vmImageName)
+      name: $(vmImageName)
     environment: 'evallepudockerdemo1-7961.eswar'
     strategy:
       runOnce:
